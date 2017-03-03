@@ -88,15 +88,15 @@ Working with the YCrCb color channel, with "ALL" HOG features, spatially binned 
 
 ###Video Implementation
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](https://youtu.be/I2N8s3K1ktI)
 
 ###Filtering False Positives, Bounding Boxes
 
 I created a heatmap from recordings of positive detection positions from each video frame. The heatmap is then thresholded to identify vehicle positions. I used scipy.ndimage.measurements.label() to label the individual groupings in the heatmap, which are likely to be vehicles. Bounding boxes coer the area of the detected groupings.
-
+<!-- 
 Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
 ![alt text][image6]
-
+ -->
 Here the resulting bounding boxes are drawn onto the last frame in the series and on other frames in the video:
 
 ![alt text][image11]
