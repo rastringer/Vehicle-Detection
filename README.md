@@ -5,16 +5,6 @@
 ##Writeup 
 [//]: # (Image References)
 
-Initial Images
-
-[image1]: ./output_images/car.png "Initial Applied Function"
-[image2]: ./output_images/not_car.png "Initial Applied Function"
-
-Initial Window Images
-
-[image3]: ./output_images/initial_window_image0.jpg "Initial Windows"
-[image4]: ./output_images/initial_window_image1.jpg "Initial Windows"
-[image5]: ./output_images/initial_window_image2.jpg "Initial Windows"
 
 Overlap Parameters
 
@@ -23,29 +13,23 @@ Overlap Parameters
 
 Pipeline Working
 
-[image8]: ./output_images/processed_image_4ver0.jpg "Overlap"
-[image9]: ./output_images/processed_image_4ver1.jpg "Overlap"
-[image10]: ./output_images/processed_image_4ver2.jpg "Overlap"
+[image8]: ./output_images/processed_image_4ver0.jpg "Pipeline"
+[image9]: ./output_images/processed_image_4ver1.jpg "Pipeline"
+[image10]: ./output_images/processed_image_4ver2.jpg "Pipeline"
 
 Video Frames
 
-[image11]: ./output_images/video1.png "Overlap"
-[image12]: ./output_images/video2.png "Overlap"
-[image13]: ./output_images/video3.png "Overlap"
+[image11]: ./output_images/video1.png "Video Frame"
+[image12]: ./output_images/video2.png "Video Frame"
+[image13]: ./output_images/video3.png "Video Frame"
 
-
+<!-- 
 window_img function results
 
 [image1]: ./output_images/initial_window_image0.jpg "Initial Window Applied"
 [image1]: ./output_images/initial_window_image0.jpg "Initial Window Applied"
 [image1]: ./output_images/initial_window_image0.jgp "Initial Window Applied"
-
-Applied function results
-
-[image1]: ./output_images/applied_0.jpg "Initial Applied Function"
-[image2]: ./output_images/applied_1.jpg "Initial Applied Function"
-[image2]: ./output_images/applied_2.jpg "Initial Applied Function"
-
+ -->
 
 Applied
 ![alt text][image1]
