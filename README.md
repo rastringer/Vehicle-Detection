@@ -2,7 +2,7 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 
-##Writeup 
+## Writeup 
 [//]: # (Image References)
 [image3]: ./output_images/initial_window_image0.jpg "Initial Windows"
 [image4]: ./output_images/initial_window_image1.jpg "Initial Windows"
@@ -23,7 +23,7 @@ window_img function results
 [image1]: ./output_images/initial_window_image0.jpg "Initial Window Applied"
 [image1]: ./output_images/initial_window_image0.jgp "Initial Window Applied"
  -->
-###Histogram of Oriented Gradients (HOG)
+### Histogram of Oriented Gradients (HOG)
 
 I read in all vehicle and non-vehicle images, separating them into two classes. I found the best results using YCrCb color parameters and turning on "ALL" hog channels. I experimented with different channels however ALL seemed the failsafe option. I found training gains by augmenting the number of orients beyond 9. I set spatial and histogram bins to 32.
 
@@ -50,12 +50,12 @@ vis = True
 
 I settled on these parameters as they provided far shaper images and vehicle detection than other combinations.
 
-###Training a classifer using HOG Features
+### Training a classifer using HOG Features
 
 I trained a linear SVM using hog-features, spatial and color-histogramm features. Initial accuracies ranged from 0.97-0.98, and passed 0.99 with some work on the parameters.
 
 
-###Sliding window search 
+### Sliding window search 
 
 Sliding window search required a fair amount of testing, checking images and experimenting with new parameters. 
 Here are some inital images showing the windows, covering not only the cars but trees and road features:
@@ -78,7 +78,7 @@ An overlap of 0.8 improved the situation, and tuning the overlap, y_start_stop a
 
 ![alt text][image7]
 
-###Images and Optimization
+### Images and Optimization
 
 Working with the YCrCb color channel, with "ALL" HOG features, spatially binned color and color histograms in the features vector gave the best results.
 
@@ -86,11 +86,11 @@ Working with the YCrCb color channel, with "ALL" HOG features, spatially binned 
 ![alt text][image9]
 ![alt text][image10]
 
-###Video Implementation
+### Video Implementation
 
 Here's a [link to my video result](https://youtu.be/I2N8s3K1ktI)
 
-###Filtering False Positives, Bounding Boxes
+### Filtering False Positives, Bounding Boxes
 
 I created a heatmap from recordings of positive detection positions from each video frame. The heatmap is then thresholded to identify vehicle positions. I used scipy.ndimage.measurements.label() to label the individual groupings in the heatmap, which are likely to be vehicles. Bounding boxes coer the area of the detected groupings.
 <!-- 
@@ -103,7 +103,7 @@ Here the resulting bounding boxes are drawn onto the last frame in the series an
 ![alt text][image12]
 ![alt text][image13]
 
-###Discussion
+### Discussion
 
 As with prior computer vision projects, I wonder if there can ever be a concrete pipeline to deal with every eventuality. There are so many variables in terrain, color, conditions and angles. I would like to replicate this project also using a deep learning model to compare results. 
 Based on the approach taken here however, I would like to work on  averaging the boxes over several frames to make the results less jittery. Experimentation with narrowing the search of the image to the left side of the screen may also be in order for this video.  
